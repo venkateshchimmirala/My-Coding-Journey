@@ -1,0 +1,5 @@
+Good Morning
+Good afternoon
+GoodNight
+hi
+bye

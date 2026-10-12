@@ -1,0 +1,3 @@
+java is easy
+java is powerful
+I love java
