@@ -1,10 +1,5 @@
 class Solution(object):
     def maximumSubarraySum(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: int
-        """
         l = r = s = maxx = 0
         d = {}
         while r < len(nums):
