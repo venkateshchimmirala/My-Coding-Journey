@@ -7,5 +7,3 @@ class Solution(object):
             result = chr(r+65) + result
             columnNumber //= 26
         return result
-
-        
