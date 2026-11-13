@@ -7,7 +7,9 @@ class Solution(object):
             min_height = min(height[left], height[right])
             w = right - left
             area = min_height * w
-            max_amount = max(area,max_amount)
+            # max_amount = max(area,max_amount)
+            if area > max_amount:
+                max_amount = area
             if height[left] <= height[right]:
                 left += 1
             else:
