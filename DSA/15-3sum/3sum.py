@@ -2,11 +2,12 @@ class Solution(object):
     def threeSum(self, nums):   
         result = []
         nums.sort()
-        for i in range(len(nums) - 2):
+        n = len(nums)
+        for i in range(n - 2):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
             start = i + 1
-            end = len(nums) - 1
+            end = n - 1
             while start < end:
                 if (nums[i] + nums[start] + nums[end]) == 0:
                     result.append([nums[i], nums[start], nums[end]])
