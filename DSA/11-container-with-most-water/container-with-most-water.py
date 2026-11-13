@@ -1,18 +1,15 @@
 class Solution(object):
     def maxArea(self, height):
-        l = 0
-        r = len(height) - 1
-        max_area = 0    
-        while l < r:
-            d = r - l
-            min_h = min(height[r], height[l])
-            area = d * min_h
-
-            if area > max_area:
-                max_area = area
-
-            if height[l] < height[r]:
-                l += 1
+        max_amount = float('-inf')
+        left = 0
+        right = len(height) - 1
+        while left < right:
+            min_height = min(height[left], height[right])
+            w = right - left
+            area = min_height * w
+            max_amount = max(area,max_amount)
+            if height[left] <= height[right]:
+                left += 1
             else:
-                r -= 1
-        return max_area   
+                right -= 1
+        return max_amount
