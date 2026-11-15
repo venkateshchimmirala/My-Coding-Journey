@@ -1,21 +1,10 @@
 class Solution(object):
     def containsDuplicate(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
-        # d={}
-        # for i in nums:
-        #     d[i]=d.get(i,0)+1 
-        # for i in nums: 
-        #     if d[i]>1:
-        #         return True
-        # return False
-        s=set()
+        d = {}
         for i in nums:
-            if i not in s:
-                s.add(i)
-            else:
+            d[i] = d.get(i,0) + 1
+        for i in nums:
+            if d[i] > 1:
                 return True
         return False
         
