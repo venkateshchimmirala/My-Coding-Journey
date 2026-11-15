@@ -7,7 +7,7 @@ class Solution(object):
         #     if d[i] > 1:
         #         return True
         # return False
-        s=set()
+        s = set()
         for i in nums:
             if i not in s:
                 s.add(i)
