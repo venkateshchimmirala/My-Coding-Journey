@@ -1,7 +1,9 @@
 class Solution(object):
     def mySqrt(self, x):
+        if x < 2:
+            return x
         start = 0
-        end = x
+        end = x // 2
         while start <= end:
             mid = (start+end) // 2
             if mid * mid == x:
