@@ -5,10 +5,11 @@ class Solution(object):
         start = 0
         end = x // 2
         while start <= end:
-            mid = (start+end) // 2
-            if mid * mid == x:
+            mid = (start + end) // 2
+            square = mid * mid
+            if square == x:
                 return mid
-            elif mid * mid < x:
+            elif square < x:
                 start = mid + 1
             else:
                 end = mid - 1
