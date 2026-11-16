@@ -3,13 +3,12 @@ class Solution(object):
         if x < 2:
             return x
         start = 0
-        end = x // 2
+        end = x
         while start <= end:
-            mid = (start + end) // 2
-            square = mid * mid
-            if square == x:
+            mid = (start+end) // 2
+            if mid * mid == x:
                 return mid
-            elif square < x:
+            elif mid * mid < x:
                 start = mid + 1
             else:
                 end = mid - 1
