@@ -3,11 +3,13 @@ class Solution(object):
         def caneat(piles, mid, h):
             hours = 0
             for i in piles:
-                hours += (i + mid - 1) / mid
+                hours += (i//mid)
+                if (i%mid) != 0:
+                    hours += 1
             return hours <= h
         start = 1
         end = max(piles)
-        ens = end
+        ans = end
         while start <= end:
             mid = (start+end)//2
             if caneat(piles, mid, h):
