@@ -3,9 +3,7 @@ class Solution(object):
         def caneat(piles, mid, h):
             hours = 0
             for i in piles:
-                hours += (i//mid)
-                if (i%mid) != 0:
-                    hours += 1
+                hours += (i + mid - 1) / mid
             return hours <= h
         start = 1
         end = max(piles)
