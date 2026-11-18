@@ -2,7 +2,7 @@ class Solution(object):
     def mySqrt(self, x):
         if x < 2:
             return x
-        start = 0
+        start = 1
         end = x//2
         while start <= end:
             mid = (start+end) // 2
