@@ -5,7 +5,6 @@ class Solution(object):
             for i in piles:
                 hours += (i + mid - 1) / mid
             return hours <= h
-
         start = 1
         end = max(piles)
         ens = end
@@ -17,7 +16,7 @@ class Solution(object):
             else:
                 start = mid + 1
         return ans
-                
+                 
         
 
         
