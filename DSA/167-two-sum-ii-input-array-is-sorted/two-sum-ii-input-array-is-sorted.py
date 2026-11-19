@@ -3,10 +3,11 @@ class Solution(object):
         left = 0
         right = len(numbers) - 1
         while left < right:
-            s = numbers[left] + numbers[right]
-            if s == target:
+            sum = numbers[left] + numbers[right]
+            if sum == target:
                 return [left + 1, right + 1]
-            elif s < target:
+            elif sum < target:
                 left += 1
             else:
                 right -= 1
+        
